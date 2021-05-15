@@ -6,6 +6,7 @@ const hbs = require('hbs');
 const request = require('request');
 const geoCode = require('./utils/geoCode');
 const foreCast = require('./utils/foreCast');
+const { response } = require('express');
 
 
 // Define Paths for Express config
@@ -70,7 +71,11 @@ app.get('/weather', (req, res) => {
             return res.send({
                 location: location,
                 temprature: callback.temp,
-                humidity: callback.humidity
+                humidity: callback.humidity,
+                feels_like : callback.feels_like,
+                Min_temprature : callback.temp_min,
+                Max_temprature : callback.temp_max,
+                pressure : callback.pressure
             })
         })
     })

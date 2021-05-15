@@ -28,7 +28,11 @@ weatherForm.addEventListener('submit', (event) => {
                 else {
                     messageTwo.innerText = `Location :  ${data.location} 
                     Temprature : ${data.temprature} degree Celsius  
-                    Humidity : ${data.humidity}`
+                    Humidity : ${data.humidity}
+                    Min_temprature : ${data.Min_temprature}
+                    Max_temprature : ${data.Max_temprature}
+                    feels_like : ${data.feels_like}
+                    pressure : ${data.pressure}`
                     
                 }
             })
